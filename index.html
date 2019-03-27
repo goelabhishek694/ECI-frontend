@@ -167,13 +167,22 @@
       
 
 
-    </section>
+    <!--</section>
     <div class="display">
     <div class="upload-btn-wrapper">
       <button class="btn">Upload Image/Video</button>
       <input type="file" name="myfile" />
     </div>
-  </div>
+  </div>-->
+<div class="display">
+  <form method="post" enctype="multipart/form-data" action="/">
+    <input type="file" name="file" accept="image/*|video/*">
+    <br>
+    <br>
+
+    <input id = "submit" class="btn btn-outline-secondary" type="submit" value="Submit">
+</form>
+</div>
 
   <section class="d-lg-flex align-items-center section-margin--large">
     <div class="about__videoWrapper">
