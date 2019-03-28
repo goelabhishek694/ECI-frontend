@@ -1,5 +1,6 @@
- <!DOCTYPE html>
-<html lang="en">
+
+  <!DOCTYPE html>
+<html lang="en-US">
   <head>
     <title>Un-Biased Election Decider</title>
     <link rel="icon" href="images/election4.png" type="image/png">
@@ -22,7 +23,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-  
+      <div id="google_translate_element"></div>
+
+      <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+      }
+      </script>
+      
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <div class="site-wrap">
 
     <div class="site-mobile-menu">
@@ -43,7 +52,7 @@
             
           </div>
           <div><img src="images/ECI.png" alt="ECI Logo" style="width:150px; height:150px; margin-left:-700px;"></div>
-        
+          
           
           <div class="col-6 mr-auto py-3 text-right" style="position: relative; top: 3px;">
             <div class="social-icons d-inline">
@@ -59,7 +68,7 @@
 
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block mb-0">
                 <li class="active"><a href="index.html">Homepage</a></li>
-                <li><a href="">About Us</a></li>
+                <li><a href="about.html">About Us</a></li>
                 
                 
     
@@ -73,7 +82,8 @@
 
       </div>
     </header>
-
+    
+    
     
     <div class="slide-one-item home-slider owl-carousel">
       
@@ -140,18 +150,19 @@
           <div class="col-md-6 col-xl-3 mb-4 mb-xl-0">
             <div class="card static__single">
               <h3>11<sup>th</sup> April 2019</h3>
-              <h4>Election Date</h4>
+              <h4>Election Starts</h4>
             </div>
           </div>
           <div class="col-md-6 col-xl-3 mb-4 mb-xl-0">
             <div class="card static__single">
-              <h3>29</h3>
+              <h3 style="font-size:50px;margin-bottom: 50px;">29
+              </h3>
               <h4>States</h4>
             </div>
           </div>
           <div class="col-md-6 col-xl-3 mb-4 mb-xl-0">
             <div class="card static__single">
-              <h3>543</h3>
+              <h3 style="font-size:50px;">543</h3>
               <h4>Constituencies</h4>
             </div>
           </div>
@@ -167,8 +178,8 @@
       
 
 
-    <!--</section>
-    <div class="display">
+    </section>
+  <!--  <div class="display">
     <div class="upload-btn-wrapper">
       <button class="btn">Upload Image/Video</button>
       <input type="file" name="myfile" />
@@ -183,6 +194,27 @@
     <input id = "submit" class="btn btn-outline-secondary" type="submit" value="Submit">
 </form>
 </div>
+<div class="display">
+<button onclick="getLocation()">Submit Your Location</button>
+
+<p id="demo"></p>
+</div>
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
 
   <section class="d-lg-flex align-items-center section-margin--large">
     <div class="about__videoWrapper">
